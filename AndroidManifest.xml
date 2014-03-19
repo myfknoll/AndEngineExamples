@@ -117,6 +117,7 @@
 		<activity android:name=".game.pong.PongGameActivity" android:configChanges="orientation"/>
 		<activity android:name=".game.snake.SnakeGameActivity" android:configChanges="orientation"/>
 		<activity android:name=".game.racer.RacerGameActivity" android:configChanges="orientation"/>
+		<activity android:name=".game.racer.TopDownRaceGameActivity" android:configChanges="orientation"/>
 		
 		<activity android:name=".app.cityradar.CityRadarActivity" android:configChanges="orientation"/>
 	</application>

@@ -134,6 +134,7 @@
 	<string name="example_game_pong">Pong (Multiplayer)</string>
 	<string name="example_game_snake">Snake</string>
 	<string name="example_game_racer">Racer</string>
+	<string name="example_game_racer_physic">Racer Physics</string>
 
 	<!-- Apps -->
 	<string name="example_app_cityradar">CityRadar</string>

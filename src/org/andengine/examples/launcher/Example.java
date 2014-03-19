@@ -83,6 +83,7 @@ import org.andengine.examples.benchmark.SpriteBenchmark;
 import org.andengine.examples.benchmark.TickerTextBenchmark;
 import org.andengine.examples.game.pong.PongGameActivity;
 import org.andengine.examples.game.racer.RacerGameActivity;
+import org.andengine.examples.game.racer.TopDownRaceGameActivity;
 import org.andengine.examples.game.snake.SnakeGameActivity;
 import org.andengine.ui.activity.BaseGameActivity;
 
@@ -187,8 +188,9 @@ enum Example {
 
 	GAME_PONG(PongGameActivity.class, R.string.example_game_pong),
 	GAME_SNAKE(SnakeGameActivity.class, R.string.example_game_snake),
-	GAME_RACER(RacerGameActivity.class, R.string.example_game_racer);
-	
+	GAME_RACER(RacerGameActivity.class, R.string.example_game_racer),
+	GAME_RACER_PHYSIC(TopDownRaceGameActivity.class, R.string.example_game_racer_physic);
+
 	// ===========================================================
 	// Constants
 	// ===========================================================

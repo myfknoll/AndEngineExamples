@@ -84,7 +84,7 @@ public class BoundCameraExample extends SimpleBaseGameActivity implements IAccel
 	@Override
 	public EngineOptions onCreateEngineOptions() {
 		Toast.makeText(this, "Touch the screen to add boxes.", Toast.LENGTH_LONG).show();
-	
+
 		this.mCamera = new Camera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
 		this.mBoundChaseCamera = new BoundCamera(0, 0, CAMERA_WIDTH / 2, CAMERA_HEIGHT / 2, 0, CAMERA_WIDTH, 0, CAMERA_HEIGHT);
 
@@ -99,7 +99,7 @@ public class BoundCameraExample extends SimpleBaseGameActivity implements IAccel
 	@Override
 	public void onCreateResources() {
 		BitmapTextureAtlasTextureRegionFactory.setAssetBasePath("gfx/");
-		
+
 		this.mBitmapTextureAtlas = new BitmapTextureAtlas(this.getTextureManager(), 64, 32, TextureOptions.BILINEAR);
 		this.mBoxFaceTextureRegion = BitmapTextureAtlasTextureRegionFactory.createTiledFromAsset(this.mBitmapTextureAtlas, this, "face_box_tiled.png", 0, 0, 2, 1); // 64x32
 		this.mBitmapTextureAtlas.load();
@@ -185,7 +185,8 @@ public class BoundCameraExample extends SimpleBaseGameActivity implements IAccel
 		return false;
 	}
 
-	public void onAccelerationAccuracyChanged(AccelerationData pAccelerationData) {
+	@Override
+    public void onAccelerationAccuracyChanged(final AccelerationData pAccelerationData) {
 
 	}
 
@@ -217,7 +218,8 @@ public class BoundCameraExample extends SimpleBaseGameActivity implements IAccel
 	private void addFace(final float pX, final float pY) {
 		final FixtureDef objectFixtureDef = PhysicsFactory.createFixtureDef(1, 0.5f, 0.5f);
 
-		final AnimatedSprite face = new AnimatedSprite(pX, pY, this.mBoxFaceTextureRegion, this.getVertexBufferObjectManager()).animate(100);
+		final AnimatedSprite face = new AnimatedSprite(pX, pY, this.mBoxFaceTextureRegion, this.getVertexBufferObjectManager());
+		face.animate(100);
 		final Body body = PhysicsFactory.createBoxBody(this.mPhysicsWorld, face, BodyType.DynamicBody, objectFixtureDef);
 
 		this.mScene.attachChild(face);
