@@ -33,7 +33,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 
 /**
  * A AndEngine demo based on the RacerGameActivity, and the Box2D tutorial from:
- * http://www.iforce2d.net/b2dtut/rotate-to-angle
+ * https://www.iforce2d.net/b2dtut/top-down-car (19.3.2014)
  *
  * @author Florian Knoll (myfknoll(at)gmail.com)
  *
